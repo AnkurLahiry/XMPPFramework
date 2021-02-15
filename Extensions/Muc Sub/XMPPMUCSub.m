@@ -210,6 +210,11 @@ static int XMPPIDTrackerTimout = 60;
 
         [subscribe addChild:messages];
         [subscribe addChild:presence];
+        [subscribe addChild:affiliation];
+        [subscribe addChild:subscribers];
+        [subscribe addChild:config];
+        [subscribe addChild:subject];
+        [subscribe addChild:system];
         
         XMPPIQ *iq = [XMPPIQ iqWithType:@"set" elementID:iqId];
         // Current user in from is always correct. Either as self or as moderator.
