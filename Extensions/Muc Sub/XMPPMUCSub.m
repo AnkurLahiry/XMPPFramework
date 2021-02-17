@@ -677,11 +677,11 @@ static int XMPPIDTrackerTimout = 60;
         
         if (invite || directInvite)
         {
-            [multicastDelegate xmppMUC:self roomJID:roomJID didReceiveInvitation: message];
+            [multicastDelegate xmppMUCSub:self roomJID:roomJID didReceiveInvitation: message];
         }
         else if (decline)
         {
-            [multicastDelegate xmppMUC:self roomJID:roomJID didReceiveInvitationDecline: message];
+            [multicastDelegate xmppMUCSub:self roomJID:roomJID didReceiveInvitationDecline: message];
         }
     }
     
